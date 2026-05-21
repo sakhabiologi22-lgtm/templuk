@@ -1,25 +1,38 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    function goLogin() {
-        window.location.href = "login/index.html";
-    }
-
-    function logout() {
-        localStorage.removeItem("username");
-        location.reload();
-    }
-
     const user = localStorage.getItem("username");
 
+    const usernameDisplay = document.getElementById("usernameDisplay");
+    const authArea = document.getElementById("authArea");
+
+    // kalau user sudah login
     if (user) {
-        document.getElementById("userInfo").innerText = "Halo, " + user;
 
-        document.getElementById("authArea").innerHTML = `
-            <button onclick="logout()" class="nav-cta">Logout</button>
-        `;
+        // tampilkan username
+        if (usernameDisplay) {
+            usernameDisplay.innerText = "Halo, " + user;
+        }
+
+        // ubah tombol login jadi logout
+        if (authArea) {
+
+            authArea.innerHTML = `
+                <a href="#" id="logoutBtn" class="btn-login">
+                    Logout
+                </a>
+            `;
+
+            // fungsi logout
+            document.getElementById("logoutBtn")
+                .addEventListener("click", function (e) {
+
+                    e.preventDefault();
+
+                    localStorage.removeItem("username");
+
+                    window.location.reload();
+                });
+        }
     }
-
-    window.goLogin = goLogin;
-    window.logout = logout;
 
 });
