@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Log In - Portofolio Sinematik</title>
+  <title>Log In</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,30 +13,54 @@
       <h2>Masuk Akun</h2>
     </div>
 
-    <div id="pesanMasuk" class="pesan-box" style="display: none;"></div>
+    <!-- alert -->
+    <div id="alertBox" class="pesan-box" style="display:none;"></div>
 
-    <form onsubmit="event.preventDefault(); lakukanMasuk();">
+    <!-- FORM -->
+    <form id="loginForm">
+
       <div class="field-group">
         <label for="username">Username</label>
-        <input type="text" id="username" placeholder="Masukkan username Anda" required>
+        <input 
+          type="text"
+          id="username"
+          placeholder="Masukkan username Anda"
+          required
+        >
       </div>
 
       <div class="field-group">
         <label for="password">Kata Sandi</label>
-        <input type="password" id="password" placeholder="Masukkan kata sandi Anda" required>
+        <input 
+          type="password"
+          id="password"
+          placeholder="Masukkan kata sandi Anda"
+          required
+        >
       </div>
 
       <button type="submit" class="btn-auth-submit">
         <span id="labelMasuk">Masuk</span>
       </button>
+
     </form>
 
     <div class="auth-footer">
-      <p>Belum punya akun? <a href="register.html">Daftar Akun Baru</a></p>
-      <p class="back-home-wrap"><a href="../index.html" class="link-back">← Kembali ke Halaman Utama</a></p>
+      <p>
+        Belum punya akun?
+        <a href="register.html">Daftar Akun Baru</a>
+      </p>
+
+      <p class="back-home-wrap">
+        <a href="../index.html" class="link-back">
+          ← Kembali ke Halaman Utama
+        </a>
+      </p>
     </div>
+
   </div>
 
   <script src="js/login.js"></script>
+
 </body>
 </html>
