@@ -140,28 +140,5 @@
   </footer>
 
   <script src="welcome.js"></script>
-  <script>
-    // Logika kontrol session login/logout yang sudah sinkron dengan ID elemen HTML di atas
-    const loginBtn = document.getElementById('loginBtn');
-    const usernameDisplay = document.getElementById('usernameDisplay');
-    const savedUser = localStorage.getItem('loggedInUser');
-
-    if (savedUser) {
-      if (usernameDisplay) usernameDisplay.textContent = 'Halo, ' + savedUser;
-      if (loginBtn) {
-        loginBtn.textContent = 'Logout';
-        loginBtn.href = '#';
-        loginBtn.addEventListener('click', function(e) {
-          e.preventDefault();
-          localStorage.removeItem('loggedInUser');
-          localStorage.removeItem('loggedInToken');
-          window.location.reload();
-        });
-      }
-    } else {
-      if (loginBtn) loginBtn.href = 'login/index.html';
-      if (usernameDisplay) usernameDisplay.textContent = '';
-    }
-  </script>
 </body>
 </html>
