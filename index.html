@@ -124,101 +124,46 @@
 
     <div class="portfolio-grid">
 
-      <!-- CARD 1 -->
-     <div class="movie-card">
-
-  <div
-    class="poster-wrapper"
-    onclick="openPopup('assets/gambar2.jpg', 'assets/suara1.mp3')"
-  >
-
+<div class="movie-card">
+  <div class="poster-wrapper" onclick="openPopup('assets/gambar2.jpg', 'assets/suara1.mp3', 'Subtitle suara 1: komentar singkat untuk poster ini.')">
     <img src="assets/gambar2.jpg" alt="Monster">
-
     <div class="poster-overlay">
       <span>Buka Detail</span>
     </div>
-
   </div>
-
   <div class="card-details">
-
     <h3>MONSTER (2023)</h3>
-
-    <div class="rating-stars">
-      ★★★★★
-    </div>
-
-    <p>
-      Memahami adalah hal terindah
-      dan termahal yang pernah ada.
-    </p>
-
+    <div class="rating-stars">★★★★★</div>
+    <p>Memahami adalah hal terindah dan termahal yang pernah ada.</p>
   </div>
-
 </div>
 
-      <!-- CARD 2 -->
-     <div class="movie-card">
-
-  <div
-    class="poster-wrapper"
-    onclick="openPopup('assets/gambar3.jpg', 'assets/suara2.mp3')"
-  >
-
+<div class="movie-card">
+  <div class="poster-wrapper" onclick="openPopup('assets/gambar3.jpg', 'assets/suara2.mp3', 'Subtitle suara 2: ini adalah reaksi kedua yang muncul saat poster dibuka.')">
     <img src="assets/gambar3.jpg" alt="Lady Bird">
-
     <div class="poster-overlay">
       <span>Buka Detail</span>
     </div>
-
   </div>
-
   <div class="card-details">
-
     <h3>LADY BIRD (2017)</h3>
-
-    <div class="rating-stars">
-      ★★★★★
-    </div>
-
-    <p>
-      I will always love u mom.
-    </p>
-
+    <div class="rating-stars">★★★★★</div>
+    <p>I will always love u mom.</p>
   </div>
-
 </div>
 
-      <!-- CARD 3 -->
-    <div class="movie-card">
-
-  <div
-    class="poster-wrapper"
-    onclick="openPopup('assets/gambar4.jpg', 'assets/suara3.mp3')"
-  >
-
+<div class="movie-card">
+  <div class="poster-wrapper" onclick="openPopup('assets/gambar4.jpg', 'assets/suara3.mp3', 'Subtitle suara 3: teks pendukung untuk suara ketiga.')">
     <img src="assets/gambar4.jpg" alt="Dead Poets Society">
-
     <div class="poster-overlay">
       <span>Buka Detail</span>
     </div>
-
   </div>
-
   <div class="card-details">
-
     <h3>DEAD POETS SOCIETY (1989)</h3>
-
-    <div class="rating-stars">
-      ★★★★★
-    </div>
-
-    <p>
-      Carpe diem.
-    </p>
-
+    <div class="rating-stars">★★★★★</div>
+    <p>Carpe diem.</p>
   </div>
-
 </div>
   </section>
 
@@ -328,6 +273,73 @@
 
   </div>
 
+</section>
+
+  <section id="responses" class="responses-section">
+  <div class="section-header">
+    <h2>RESPON PENGGUNA</h2>
+  </div>
+
+  <div class="response-grid">
+
+    <article class="response-card">
+      <h3>Video 2</h3>
+      <div class="responsive-iframe">
+        <video controls width="100%">
+          <source src="assets/video2.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div id="loginWarning2" class="login-warning">
+        Silakan login untuk menambahkan pendapat.
+      </div>
+
+      <div id="responseArea2" class="response-area" style="display:none;">
+        <textarea id="comment2" placeholder="Tulis pendapatmu tentang video 2..."></textarea>
+        <button onclick="kirimKomentar(2)">Kirim Pendapat</button>
+        <div id="comments2" class="comments-list"></div>
+      </div>
+    </article>
+
+    <article class="response-card">
+      <h3>Video 3</h3>
+      <div class="responsive-iframe">
+        <video controls width="100%">
+          <source src="assets/video3.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div id="loginWarning3" class="login-warning">
+        Silakan login untuk menambahkan pendapat.
+      </div>
+
+      <div id="responseArea3" class="response-area" style="display:none;">
+        <textarea id="comment3" placeholder="Tulis pendapatmu tentang video 3..."></textarea>
+        <button onclick="kirimKomentar(3)">Kirim Pendapat</button>
+        <div id="comments3" class="comments-list"></div>
+      </div>
+    </article>
+
+    <article class="response-card">
+      <h3>Video 4</h3>
+      <div class="responsive-iframe">
+        <video controls width="100%">
+          <source src="assets/video4.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div id="loginWarning4" class="login-warning">
+        Silakan login untuk menambahkan pendapat.
+      </div>
+
+      <div id="responseArea4" class="response-area" style="display:none;">
+        <textarea id="comment4" placeholder="Tulis pendapatmu tentang video 4..."></textarea>
+        <button onclick="kirimKomentar(4)">Kirim Pendapat</button>
+        <div id="comments4" class="comments-list"></div>
+      </div>
+    </article>
+
+  </div>
 </section>
 
   <!-- ARSIP -->
@@ -463,61 +475,68 @@
     }
 
   </script>
-  <!-- POPUP -->
-<div id="popupModal" class="popup-modal">
+  <!-- POPUP MODAL -->
+  <div id="popupModal" class="popup-modal">
 
-  <span class="close-popup" onclick="closePopup()">
-    ×
-  </span>
+    <span class="close-popup" onclick="closePopup()">
+      ×
+    </span>
 
-  <img id="popupImage" class="popup-image">
+    <div class="popup-content">
 
-  <audio id="popupAudio"></audio>
+      <img id="popupImage" class="popup-image">
 
-</div>
+      <p id="popupSubtitle" class="popup-subtitle"></p>
+
+      <audio id="popupAudio"></audio>
+
+    </div>
+
+  </div>
+
+  <!-- SCRIPT -->
   <script>
 
-  const popupModal =
-    document.getElementById("popupModal");
+    const popupModal =
+      document.getElementById("popupModal");
 
-  const popupImage =
-    document.getElementById("popupImage");
+    const popupImage =
+      document.getElementById("popupImage");
 
-  const popupAudio =
-    document.getElementById("popupAudio");
+    const popupAudio =
+      document.getElementById("popupAudio");
 
-  function openPopup(imageSrc, audioSrc) {
+    const popupSubtitle =
+      document.getElementById("popupSubtitle");
 
-    popupModal.style.display = "flex";
+    function openPopup(imageSrc, audioSrc, subtitleText) {
 
-    popupImage.src = imageSrc;
+      popupModal.style.display = "flex";
 
-    popupAudio.src = audioSrc;
+      popupImage.src = imageSrc;
 
-    popupAudio.play();
+      popupAudio.src = audioSrc;
 
-  }
+      popupSubtitle.textContent = subtitleText;
 
-  function closePopup() {
+      popupAudio.play();
 
-    popupModal.style.display = "none";
-
-    popupAudio.pause();
-
-    popupAudio.currentTime = 0;
-
-  }
-
-  // close saat klik luar gambar
-  popupModal.addEventListener("click", function(e) {
-
-    if (e.target === popupModal) {
-      closePopup();
     }
 
-  });
+    function closePopup() {
 
-</script>
+      popupModal.style.display = "none";
+
+      popupAudio.pause();
+
+      popupAudio.currentTime = 0;
+
+    }
+
+  </script>
+
+</body>
+</html>
 
 </body>
 </html>
