@@ -125,89 +125,101 @@
     <div class="portfolio-grid">
 
       <!-- CARD 1 -->
-      <div class="movie-card">
+     <div class="movie-card">
 
-        <div class="poster-wrapper">
-          <img src="assets/gambar2.jpg" alt="Monster">
+  <div
+    class="poster-wrapper"
+    onclick="openPopup('assets/gambar2.jpg', 'assets/suara1.mp3')"
+  >
 
-          <div class="poster-overlay">
-            <span>Buka Detail</span>
-          </div>
-        </div>
+    <img src="assets/gambar2.jpg" alt="Monster">
 
-        <div class="card-details">
-
-          <h3>MONSTER (2023)</h3>
-
-          <div class="rating-stars">
-            ★★★★★
-          </div>
-
-          <p>
-            Memahami adalah hal terindah
-            dan termahal yang pernah ada.
-          </p>
-
-        </div>
-
-      </div>
-
-      <!-- CARD 2 -->
-      <div class="movie-card">
-
-        <div class="poster-wrapper">
-          <img src="assets/gambar3.jpg" alt="Lady Bird">
-
-          <div class="poster-overlay">
-            <span>Buka Detail</span>
-          </div>
-        </div>
-
-        <div class="card-details">
-
-          <h3>LADY BIRD (2017)</h3>
-
-          <div class="rating-stars">
-            ★★★★★
-          </div>
-
-          <p>
-            I will always love u mom.
-          </p>
-
-        </div>
-
-      </div>
-
-      <!-- CARD 3 -->
-      <div class="movie-card">
-
-        <div class="poster-wrapper">
-          <img src="assets/gambar4.jpg" alt="Dead Poets Society">
-
-          <div class="poster-overlay">
-            <span>Buka Detail</span>
-          </div>
-        </div>
-
-        <div class="card-details">
-
-          <h3>DEAD POETS SOCIETY (1989)</h3>
-
-          <div class="rating-stars">
-            ★★★★★
-          </div>
-
-          <p>
-            Carpe diem.
-          </p>
-
-        </div>
-
-      </div>
-
+    <div class="poster-overlay">
+      <span>Buka Detail</span>
     </div>
 
+  </div>
+
+  <div class="card-details">
+
+    <h3>MONSTER (2023)</h3>
+
+    <div class="rating-stars">
+      ★★★★★
+    </div>
+
+    <p>
+      Memahami adalah hal terindah
+      dan termahal yang pernah ada.
+    </p>
+
+  </div>
+
+</div>
+
+      <!-- CARD 2 -->
+     <div class="movie-card">
+
+  <div
+    class="poster-wrapper"
+    onclick="openPopup('assets/gambar3.jpg', 'assets/suara2.mp3')"
+  >
+
+    <img src="assets/gambar3.jpg" alt="Lady Bird">
+
+    <div class="poster-overlay">
+      <span>Buka Detail</span>
+    </div>
+
+  </div>
+
+  <div class="card-details">
+
+    <h3>LADY BIRD (2017)</h3>
+
+    <div class="rating-stars">
+      ★★★★★
+    </div>
+
+    <p>
+      I will always love u mom.
+    </p>
+
+  </div>
+
+</div>
+
+      <!-- CARD 3 -->
+    <div class="movie-card">
+
+  <div
+    class="poster-wrapper"
+    onclick="openPopup('assets/gambar4.jpg', 'assets/suara3.mp3')"
+  >
+
+    <img src="assets/gambar4.jpg" alt="Dead Poets Society">
+
+    <div class="poster-overlay">
+      <span>Buka Detail</span>
+    </div>
+
+  </div>
+
+  <div class="card-details">
+
+    <h3>DEAD POETS SOCIETY (1989)</h3>
+
+    <div class="rating-stars">
+      ★★★★★
+    </div>
+
+    <p>
+      Carpe diem.
+    </p>
+
+  </div>
+
+</div>
   </section>
 
   <!-- KONTEN SEKOLAH -->
@@ -451,6 +463,61 @@
     }
 
   </script>
+  <!-- POPUP -->
+<div id="popupModal" class="popup-modal">
+
+  <span class="close-popup" onclick="closePopup()">
+    ×
+  </span>
+
+  <img id="popupImage" class="popup-image">
+
+  <audio id="popupAudio"></audio>
+
+</div>
+  <script>
+
+  const popupModal =
+    document.getElementById("popupModal");
+
+  const popupImage =
+    document.getElementById("popupImage");
+
+  const popupAudio =
+    document.getElementById("popupAudio");
+
+  function openPopup(imageSrc, audioSrc) {
+
+    popupModal.style.display = "flex";
+
+    popupImage.src = imageSrc;
+
+    popupAudio.src = audioSrc;
+
+    popupAudio.play();
+
+  }
+
+  function closePopup() {
+
+    popupModal.style.display = "none";
+
+    popupAudio.pause();
+
+    popupAudio.currentTime = 0;
+
+  }
+
+  // close saat klik luar gambar
+  popupModal.addEventListener("click", function(e) {
+
+    if (e.target === popupModal) {
+      closePopup();
+    }
+
+  });
+
+</script>
 
 </body>
 </html>
