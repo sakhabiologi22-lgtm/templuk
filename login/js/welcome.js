@@ -1,15 +1,13 @@
 const user = localStorage.getItem("username");
 
-const usernameDisplay =
-document.getElementById("usernameDisplay");
-
 const authArea =
 document.getElementById("authArea");
 
-if(user){
+/* =========================
+   LOGIN / LOGOUT
+========================= */
 
-  usernameDisplay.textContent =
-  "Halo, " + user;
+if(user){
 
   authArea.innerHTML = `
   <button class="btn-login" onclick="logout()">
@@ -70,7 +68,9 @@ document.getElementById("popupAudio");
 const popupSubtitle =
 document.getElementById("popupSubtitle");
 
-/* SUBTITLE */
+/* =========================
+   SUBTITLE
+========================= */
 
 const subtitles = {
 
@@ -211,6 +211,10 @@ const subtitles = {
 let currentSubtitle = [];
 let subtitleInterval;
 
+/* =========================
+   OPEN POPUP
+========================= */
+
 function openPopup(imageSrc,audioSrc,key){
 
   popupModal.style.display = "flex";
@@ -222,11 +226,17 @@ function openPopup(imageSrc,audioSrc,key){
   popupAudio.play();
 
   currentSubtitle =
-  subtitles[key];
+  subtitles[key] || [];
+
+  clearInterval(subtitleInterval);
 
   subtitleInterval =
   setInterval(updateSubtitle,100);
 }
+
+/* =========================
+   UPDATE SUBTITLE
+========================= */
 
 function updateSubtitle(){
 
@@ -250,6 +260,10 @@ function updateSubtitle(){
   popupSubtitle.innerText = "";
 }
 
+/* =========================
+   CLOSE POPUP
+========================= */
+
 function closePopup(){
 
   popupModal.style.display = "none";
@@ -262,3 +276,15 @@ function closePopup(){
 
   clearInterval(subtitleInterval);
 }
+
+/* =========================
+   AUTO CLOSE AUDIO
+========================= */
+
+popupAudio.addEventListener("ended",()=>{
+
+  popupSubtitle.innerText = "";
+
+  clearInterval(subtitleInterval);
+
+});
