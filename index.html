@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RUANG BEREKSPRESI</title>
+  <title>LETTERBOXDKU</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- NAVBAR -->
+
   <header class="navbar">
 
     <div class="logo">
@@ -17,19 +19,15 @@
 
     <nav class="nav-links">
       <a href="#home">Home</a>
-      <a href="#aboutme">About</a>
-      <a href="#favorite">Favorit</a>
-      <a href="#school">Sekolah</a>
-      <a href="#archive">Arsip</a>
+      <a href="#about">About</a>
+      <a href="#favorite">Favorites</a>
+      <a href="#media">Media</a>
+      <a href="#discussion">Discussion</a>
     </nav>
 
     <div class="auth-buttons">
 
-      <span
-        id="usernameDisplay"
-        class="user-info"
-        style="margin-right:15px;font-weight:bold;color:#ff9800;"
-      ></span>
+      <span id="usernameDisplay" class="user-info"></span>
 
       <span id="authArea">
         <a href="login/index.html" class="btn-login">
@@ -42,16 +40,13 @@
   </header>
 
   <!-- HERO -->
+
   <section id="home" class="hero-section">
 
     <div class="hero-container">
 
       <div class="hero-profile-box">
-        <img
-          src="assets/gambar1.jpg"
-          alt="Foto Profil"
-          class="profile-img"
-        >
+        <img src="assets/gambar1.jpg" class="profile-img">
       </div>
 
       <div class="hero-text-box">
@@ -65,13 +60,13 @@
         </h1>
 
         <p>
-          Menyukai film, video essay,
-          dan dunia sinematik yang absurd,
-          niche, dan emosional.
+          Tempat kecil untuk membahas film,
+          emosi, dan hal-hal yang sulit dijelaskan
+          lewat kata-kata biasa.
         </p>
 
-        <a href="#archive" class="btn-primary">
-          Jelajahi Arsip
+        <a href="#favorite" class="btn-primary">
+          Jelajahi Favorit
         </a>
 
       </div>
@@ -81,7 +76,8 @@
   </section>
 
   <!-- ABOUT -->
-  <section id="aboutme" class="about-section">
+
+  <section id="about" class="about-section">
 
     <div class="section-header">
       <h2>MORE ABOUT ME</h2>
@@ -90,22 +86,23 @@
     <div class="about-content">
 
       <div class="about-text">
+
         <p>
-          Website ini dibuat sebagai ruang untuk
-          berbagi pendapat tentang film, video,
-          dan karya visual yang berkesan.
+          Aku suka film yang hangat,
+          sedih, absurd, dan terasa manusia.
         </p>
 
         <p>
-          Aku suka film yang emosional,
-          hangat, dan punya cara unik
-          untuk memahami manusia.
+          Website ini dibuat sebagai tempat
+          untuk berbagi pendapat dan emosi
+          setelah menonton sesuatu.
         </p>
+
       </div>
 
       <div class="about-video">
 
-        <video controls width="100%">
+        <video controls>
           <source src="assets/video1.mp4" type="video/mp4">
         </video>
 
@@ -115,7 +112,8 @@
 
   </section>
 
-  <!-- FILM FAVORIT -->
+  <!-- FAVORITE -->
+
   <section id="favorite" class="portfolio-section">
 
     <div class="section-header">
@@ -124,290 +122,249 @@
 
     <div class="portfolio-grid">
 
-<div class="movie-card">
-  <div class="poster-wrapper" onclick="openPopup('assets/gambar2.jpg', 'assets/suara1.mp3', 'Subtitle suara 1: komentar singkat untuk poster ini.')">
-    <img src="assets/gambar2.jpg" alt="Monster">
-    <div class="poster-overlay">
-      <span>Buka Detail</span>
-    </div>
-  </div>
-  <div class="card-details">
-    <h3>MONSTER (2023)</h3>
-    <div class="rating-stars">★★★★★</div>
-    <p>Memahami adalah hal terindah dan termahal yang pernah ada.</p>
-  </div>
-</div>
+      <!-- MONSTER -->
 
-<div class="movie-card">
-  <div class="poster-wrapper" onclick="openPopup('assets/gambar3.jpg', 'assets/suara2.mp3', 'Subtitle suara 2: ini adalah reaksi kedua yang muncul saat poster dibuka.')">
-    <img src="assets/gambar3.jpg" alt="Lady Bird">
-    <div class="poster-overlay">
-      <span>Buka Detail</span>
-    </div>
-  </div>
-  <div class="card-details">
-    <h3>LADY BIRD (2017)</h3>
-    <div class="rating-stars">★★★★★</div>
-    <p>I will always love u mom.</p>
-  </div>
-</div>
+      <div class="movie-card">
 
-<div class="movie-card">
-  <div class="poster-wrapper" onclick="openPopup('assets/gambar4.jpg', 'assets/suara3.mp3', 'Subtitle suara 3: teks pendukung untuk suara ketiga.')">
-    <img src="assets/gambar4.jpg" alt="Dead Poets Society">
-    <div class="poster-overlay">
-      <span>Buka Detail</span>
+        <div class="poster-wrapper"
+          onclick="openPopup(
+          'assets/gambar2.jpg',
+          'assets/suara1.mp3',
+          'monster'
+          )">
+
+          <img src="assets/gambar2.jpg">
+
+          <div class="poster-overlay">
+            <span>Open Scene</span>
+          </div>
+
+        </div>
+
+        <div class="card-details">
+
+          <h3>MONSTER (2023)</h3>
+
+          <div class="rating-stars">
+            ★★★★★
+          </div>
+
+          <p>
+            Memahami seseorang mungkin adalah
+            bentuk cinta paling mahal.
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- LADY BIRD -->
+
+      <div class="movie-card">
+
+        <div class="poster-wrapper"
+          onclick="openPopup(
+          'assets/gambar3.jpg',
+          'assets/suara2.mp3',
+          'ladybird'
+          )">
+
+          <img src="assets/gambar3.jpg">
+
+          <div class="poster-overlay">
+            <span>Open Scene</span>
+          </div>
+
+        </div>
+
+        <div class="card-details">
+
+          <h3>LADY BIRD (2017)</h3>
+
+          <div class="rating-stars">
+            ★★★★★
+          </div>
+
+          <p>
+            Sometimes love and understanding
+            are not the same thing.
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- DPS -->
+
+      <div class="movie-card">
+
+        <div class="poster-wrapper"
+          onclick="openPopup(
+          'assets/gambar4.jpg',
+          'assets/suara3.mp3',
+          'dps'
+          )">
+
+          <img src="assets/gambar4.jpg">
+
+          <div class="poster-overlay">
+            <span>Open Scene</span>
+          </div>
+
+        </div>
+
+        <div class="card-details">
+
+          <h3>DEAD POETS SOCIETY</h3>
+
+          <div class="rating-stars">
+            ★★★★★
+          </div>
+
+          <p>
+            The words you don't say
+            are sometimes the loudest.
+          </p>
+
+        </div>
+
+      </div>
+
     </div>
-  </div>
-  <div class="card-details">
-    <h3>DEAD POETS SOCIETY (1989)</h3>
-    <div class="rating-stars">★★★★★</div>
-    <p>Carpe diem.</p>
-  </div>
-</div>
+
   </section>
 
-  <!-- KONTEN SEKOLAH -->
-  <section id="school" class="school-section">
+  <!-- MEDIA -->
+
+  <section id="media" class="media-section">
 
     <div class="section-header">
-      <h2>KONTEN SEKOLAH</h2>
+      <h2>MEDIA</h2>
     </div>
 
-    <!-- kalau belum login -->
-    <div id="loginWarning" class="login-warning">
+    <div class="media-container">
 
-      <p>
-        Silakan login untuk melihat
-        dan menambahkan pendapat.
-      </p>
+      <div class="media-frame">
 
-    </div>
+        <h3>
+          <span class="dot green"></span>
+          Video bumi datar
+        </h3>
 
-    <!-- area login -->
-    <div id="schoolArea" style="display:none;">
+        <div class="responsive-iframe">
 
-      <div class="school-video">
-
-        <video controls width="100%">
-          <source src="assets/video2.mp4" type="video/mp4">
-        </video>
-
-      </div>
-
-      <div class="comment-box">
-
-        <textarea
-          id="schoolComment"
-          placeholder="Tulis pendapatmu..."
-        ></textarea>
-
-        <button onclick="kirimKomentarSekolah()">
-          Kirim Pendapat
-        </button>
-
-      </div>
-
-      <div
-        id="schoolCommentsList"
-        class="comments-list"
-      ></div>
-
-    </div>
-
-  </section>
-  <!-- MEDIA -->
-<section id="media" class="media-section">
-
-  <div class="section-header">
-    <h2>MEDIA</h2>
-  </div>
-
-  <div class="media-container">
-
-    <!-- VIDEO -->
-    <div class="media-frame">
-
-      <h3>
-        <span class="dot green"></span>
-        Video bumi datar
-      </h3>
-
-      <div class="responsive-iframe">
-
-        <iframe
+          <iframe
           width="100%"
           height="315"
           src="https://www.youtube.com/embed/WkEpw5r_SjQ"
-          title="Video Edukasi"
-          frameborder="0"
-          allowfullscreen
-        ></iframe>
+          allowfullscreen>
+          </iframe>
+
+        </div>
 
       </div>
 
-    </div>
+      <div class="media-frame">
 
-    <!-- MAPS -->
-    <div class="media-frame">
+        <h3>
+          <span class="dot orange"></span>
+          Lokasi sekolah
+        </h3>
 
-      <h3>
-        <span class="dot orange"></span>
-        Lokasi sekolah
-      </h3>
+        <div class="responsive-iframe">
 
-      <div class="responsive-iframe">
-
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.844431959954!2d110.3910398758877!3d-7.806297377501062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f131!3m3!1m2!1s0x2e7a5765afc739e5%3A0x9afc136372ca6bf5!2sSMA%20Negeri%208%20Yogyakarta!5e0!3m2!1sid!2sid!4v1716300000000!5m2!1sid!2sid"
+          <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18..."
           width="100%"
           height="315"
           style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-        ></iframe>
+          allowfullscreen="">
+          </iframe>
+
+        </div>
 
       </div>
 
     </div>
 
-  </div>
+  </section>
 
-</section>
+  <!-- DISCUSSION -->
 
-  <section id="responses" class="responses-section">
-  <div class="section-header">
-    <h2>RESPON PENGGUNA</h2>
-  </div>
-
-  <div class="response-grid">
-
-    <article class="response-card">
-      <h3>Video 2</h3>
-      <div class="responsive-iframe">
-        <video controls width="100%">
-          <source src="assets/video2.mp4" type="video/mp4">
-        </video>
-      </div>
-
-      <div id="loginWarning2" class="login-warning">
-        Silakan login untuk menambahkan pendapat.
-      </div>
-
-      <div id="responseArea2" class="response-area" style="display:none;">
-        <textarea id="comment2" placeholder="Tulis pendapatmu tentang video 2..."></textarea>
-        <button onclick="kirimKomentar(2)">Kirim Pendapat</button>
-        <div id="comments2" class="comments-list"></div>
-      </div>
-    </article>
-
-    <article class="response-card">
-      <h3>Video 3</h3>
-      <div class="responsive-iframe">
-        <video controls width="100%">
-          <source src="assets/video3.mp4" type="video/mp4">
-        </video>
-      </div>
-
-      <div id="loginWarning3" class="login-warning">
-        Silakan login untuk menambahkan pendapat.
-      </div>
-
-      <div id="responseArea3" class="response-area" style="display:none;">
-        <textarea id="comment3" placeholder="Tulis pendapatmu tentang video 3..."></textarea>
-        <button onclick="kirimKomentar(3)">Kirim Pendapat</button>
-        <div id="comments3" class="comments-list"></div>
-      </div>
-    </article>
-
-    <article class="response-card">
-      <h3>Video 4</h3>
-      <div class="responsive-iframe">
-        <video controls width="100%">
-          <source src="assets/video4.mp4" type="video/mp4">
-        </video>
-      </div>
-
-      <div id="loginWarning4" class="login-warning">
-        Silakan login untuk menambahkan pendapat.
-      </div>
-
-      <div id="responseArea4" class="response-area" style="display:none;">
-        <textarea id="comment4" placeholder="Tulis pendapatmu tentang video 4..."></textarea>
-        <button onclick="kirimKomentar(4)">Kirim Pendapat</button>
-        <div id="comments4" class="comments-list"></div>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-  <!-- ARSIP -->
-  <section id="archive" class="archive-section">
+  <section id="discussion" class="discussion-section">
 
     <div class="section-header">
-      <h2>ARSIP FILM & VIDEO</h2>
+      <h2>VIDEO DISCUSSION</h2>
     </div>
 
-    <div class="archive-grid">
+    <div class="discussion-grid">
 
-      <!-- CARD -->
-      <div class="archive-card">
+      <!-- VIDEO 2 -->
 
-        <img src="assets/gambar6.jpg" alt="Film 1">
+      <div class="discussion-card">
 
-        <h3>ARSIP 01</h3>
+        <video controls>
+          <source src="assets/video2.mp4" type="video/mp4">
+        </video>
 
-        <p>
-          Film yang memberi rasa hangat
-          dan kesepian secara bersamaan.
-        </p>
+        <h3>Video 2</h3>
 
         <textarea
-          placeholder="Tambahkan pendapat..."
-        ></textarea>
+        placeholder="Tulis pendapatmu..."
+        id="comment2">
+        </textarea>
 
-        <button>Kirim Komentar</button>
+        <button onclick="sendComment(2)">
+          Kirim
+        </button>
+
+        <div id="comments2"></div>
 
       </div>
 
-      <!-- CARD -->
-      <div class="archive-card">
+      <!-- VIDEO 3 -->
 
-        <img src="assets/gambar7.jpg" alt="Film 2">
+      <div class="discussion-card">
 
-        <h3>ARSIP 02</h3>
+        <video controls>
+          <source src="assets/video3.mp4" type="video/mp4">
+        </video>
 
-        <p>
-          Tentang manusia yang mencoba
-          memahami dirinya sendiri.
-        </p>
+        <h3>Video 3</h3>
 
         <textarea
-          placeholder="Tambahkan pendapat..."
-        ></textarea>
+        placeholder="Tulis pendapatmu..."
+        id="comment3">
+        </textarea>
 
-        <button>Kirim Komentar</button>
+        <button onclick="sendComment(3)">
+          Kirim
+        </button>
+
+        <div id="comments3"></div>
 
       </div>
 
-      <!-- CARD -->
-      <div class="archive-card">
+      <!-- VIDEO 4 -->
 
-        <img src="assets/gambar8.jpg" alt="Film 3">
+      <div class="discussion-card">
 
-        <h3>ARSIP 03</h3>
+        <video controls>
+          <source src="assets/video4.mp4" type="video/mp4">
+        </video>
 
-        <p>
-          Visual yang tenang,
-          tetapi menghantam emosional.
-        </p>
+        <h3>Video 4</h3>
 
         <textarea
-          placeholder="Tambahkan pendapat..."
-        ></textarea>
+        placeholder="Tulis pendapatmu..."
+        id="comment4">
+        </textarea>
 
-        <button>Kirim Komentar</button>
+        <button onclick="sendComment(4)">
+          Kirim
+        </button>
+
+        <div id="comments4"></div>
 
       </div>
 
@@ -416,66 +373,13 @@
   </section>
 
   <!-- FOOTER -->
+
   <footer class="main-footer">
-
-    <p>
-      © 2026 budget letterboxd
-    </p>
-
+    © 2026 LetterboxdKu
   </footer>
 
-  <!-- WELCOME -->
-  <script src="login/js/welcome.js"></script>
+  <!-- POPUP -->
 
-  <!-- LOGIN CONTENT -->
-  <script>
-
-    const user = localStorage.getItem("username");
-
-    const schoolArea =
-      document.getElementById("schoolArea");
-
-    const loginWarning =
-      document.getElementById("loginWarning");
-
-    // cek login
-    if (user) {
-
-      schoolArea.style.display = "block";
-      loginWarning.style.display = "none";
-
-    }
-
-    // komentar dummy
-    function kirimKomentarSekolah() {
-
-      const commentInput =
-        document.getElementById("schoolComment");
-
-      const commentsList =
-        document.getElementById("schoolCommentsList");
-
-      if (commentInput.value.trim() === "") {
-        return;
-      }
-
-      const comment = document.createElement("div");
-
-      comment.classList.add("comment-item");
-
-      comment.innerHTML = `
-        <strong>${user}</strong>
-        <p>${commentInput.value}</p>
-      `;
-
-      commentsList.prepend(comment);
-
-      commentInput.value = "";
-
-    }
-
-  </script>
-  <!-- POPUP MODAL -->
   <div id="popupModal" class="popup-modal">
 
     <span class="close-popup" onclick="closePopup()">
@@ -486,7 +390,8 @@
 
       <img id="popupImage" class="popup-image">
 
-      <p id="popupSubtitle" class="popup-subtitle"></p>
+      <div id="popupSubtitle" class="popup-subtitle">
+      </div>
 
       <audio id="popupAudio"></audio>
 
@@ -494,49 +399,7 @@
 
   </div>
 
-  <!-- SCRIPT -->
-  <script>
-
-    const popupModal =
-      document.getElementById("popupModal");
-
-    const popupImage =
-      document.getElementById("popupImage");
-
-    const popupAudio =
-      document.getElementById("popupAudio");
-
-    const popupSubtitle =
-      document.getElementById("popupSubtitle");
-
-    function openPopup(imageSrc, audioSrc, subtitleText) {
-
-      popupModal.style.display = "flex";
-
-      popupImage.src = imageSrc;
-
-      popupAudio.src = audioSrc;
-
-      popupSubtitle.textContent = subtitleText;
-
-      popupAudio.play();
-
-    }
-
-    function closePopup() {
-
-      popupModal.style.display = "none";
-
-      popupAudio.pause();
-
-      popupAudio.currentTime = 0;
-
-    }
-
-  </script>
-
-</body>
-</html>
+  <script src="welcome.js"></script>
 
 </body>
 </html>
