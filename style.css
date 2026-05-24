@@ -1,450 +1,238 @@
-/* RESET & GLOBAL STYLES */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  scroll-behavior: smooth;
+/* ===== COMMENT SECTION ===== */
+
+.comment-box {
+  margin-top: 20px;
 }
 
-body {
-  background-color: #14181c;
-  color: #9ab;
-  line-height: 1.5;
-}
+.comment-box textarea {
 
-/* NAVBAR STYLE (Letterboxd Style) */
-.navbar {
-  position: fixed;
-  top: 0;
   width: 100%;
-  background-color: #1c252d;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 8%;
-  z-index: 9999;
-  border-bottom: 1px solid #24303c;
-}
+  min-height: 120px;
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: #ffffff;
-  letter-spacing: -0.5px;
-}
-
-.accent-dot {
-  color: #ff7a00;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #9ab;
-  margin: 0 12px;
-  font-weight: 600;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: color 0.2s;
-}
-
-.nav-links a:hover {
-  color: #ffffff;
-}
-
-.auth-buttons {
-  display: flex;
-  align-items: center;
-}
-
-.user-info {
-  color: #ffffff;
-  font-size: 0.9rem;
-  margin-right: 15px;
-  font-weight: 500;
-}
-
-.btn-login, .nav-cta {
-  background-color: #445566;
-  color: #ffffff;
-  text-decoration: none;
-  padding: 7px 16px;
-  border-radius: 4px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-.btn-login:hover, .nav-cta:hover {
-  background-color: #556677;
-}
-
-/* HERO SECTION */
-.hero-section {
-  padding: 140px 8% 60px 8%;
-  background: linear-gradient(180deg, #1c252d 0%, #14181c 100%);
-  border-bottom: 1px solid #1c252d;
-}
-
-.hero-container {
-  display: table;
-  width: 100%;
-}
-
-.hero-profile-box {
-  display: table-cell;
-  vertical-align: middle;
-  width: 160px;
-}
-
-.profile-img {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #24303c;
-}
-
-.hero-text-box {
-  display: table-cell;
-  vertical-align: middle;
-  padding-left: 40px;
-}
-
-.badge-siswa {
-  font-size: 0.75rem;
-  background-color: #24303c;
-  color: #9ab;
-  padding: 4px 8px;
-  border-radius: 3px;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-
-.hero-text-box h1 {
-  color: #ffffff;
-  margin: 10px 0;
-  font-size: 2.2rem;
-  font-weight: 700;
-}
-
-.hero-text-box p {
-  max-width: 700px;
-  color: #9ab;
-  margin-bottom: 20px;
-  font-size: 1.05rem;
-}
-
-.btn-primary {
-  display: inline-block;
-  background-color: #00c030;
-  color: #ffffff;
-  text-decoration: none;
-  padding: 9px 20px;
-  border-radius: 4px;
-  font-weight: 600;
-  font-size: 0.9rem;
-  transition: background-color 0.2s;
-}
-
-.btn-primary:hover {
-  background-color: #00b02a;
-}
-
-/* STRUCTURAL SECTIONS */
-section {
-  padding: 60px 8%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.section-header {
-  border-bottom: 1px solid #24303c;
-  margin-bottom: 30px;
-  padding-bottom: 8px;
-}
-
-.section-header h2 {
-  font-size: 0.95rem;
-  color: #9ab;
-  letter-spacing: 1.5px;
-  font-weight: 600;
-}
-
-/* ABOUT SECTION */
-.about-content {
-  display: block;
-}
-
-.about-content p {
-  font-size: 1.05rem;
-  margin-bottom: 30px;
-  max-width: 900px;
-}
-
-.skills-grid {
-  background-color: #1c252d;
-  padding: 25px;
-  border-radius: 6px;
-  border: 1px solid #24303c;
-}
-
-.skills-grid h3 {
-  color: #ffffff;
-  font-size: 0.9rem;
-  margin-bottom: 20px;
-  letter-spacing: 1px;
-}
-
-.skill-item {
-  margin-bottom: 15px;
-}
-
-.skill-info {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.85rem;
-  margin-bottom: 5px;
-  color: #9ab;
-}
-
-.skill-track {
-  background-color: #14181c;
-  height: 8px;
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-.skill-progress {
-  height: 100%;
-}
-
-.orange-bar { background-color: #e07a3e; }
-.green-bar { background-color: #4b9e6b; }
-
-/* PORTFOLIO SECTION (Letterboxd Film Grid Style) */
-.portfolio-grid {
-  display: block;
-  text-align: left;
-}
-
-.movie-card {
-  display: inline-block;
-  width: 31%;
-  margin-right: 2%;
-  vertical-align: top;
-  background-color: #1c252d;
-  border-radius: 6px;
-  overflow: hidden;
-  border: 1px solid #24303c;
-  margin-bottom: 20px;
-}
-
-.movie-card:nth-child(3n) {
-  margin-right: 0;
-}
-
-.poster-wrapper {
-  position: relative;
-  width: 100%;
-  height: 240px;
-  background-color: #24303c;
-  cursor: pointer;
-}
-
-.poster-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.poster-overlay {
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background-color: rgba(0, 192, 48, 0.2);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.2s;
-}
-
-.poster-wrapper:hover .poster-overlay {
-  opacity: 1;
-}
-
-.poster-overlay span {
-  color: #ffffff;
-  background-color: rgba(20, 24, 28, 0.9);
-  padding: 6px 12px;
-  border-radius: 4px;
-  font-size: 0.8rem;
-  font-weight: 600;
-}
-
-.card-details {
-  padding: 15px;
-}
-
-.card-details h3 {
-  color: #ffffff;
-  font-size: 1.1rem;
-  margin-bottom: 5px;
-}
-
-.rating-stars {
-  color: #00c030;
-  font-size: 0.9rem;
-  margin-bottom: 10px;
-}
-
-.heart-icon {
-  color: #ff7a00;
-  margin-left: 5px;
-}
-
-.card-details p {
-  font-size: 0.85rem;
-  color: #9ab;
-}
-
-/* MEDIA SECTION */
-.media-container {
-  display: flex;
-  gap: 25px;
-}
-
-.media-frame {
-  flex: 1;
-  background-color: #1c252d;
-  padding: 20px;
-  border-radius: 6px;
-  border: 1px solid #24303c;
-}
-
-.media-frame h3 {
-  color: #ffffff;
-  font-size: 0.9rem;
-  margin-bottom: 15px;
-  display: flex;
-  align-items: center;
-}
-
-.dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  display: inline-block;
-  margin-right: 8px;
-}
-
-.dot.green { background-color: #00c030; }
-.dot.orange { background-color: #ff7a00; }
-
-.responsive-iframe {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  border-radius: 4px;
-}
-
-/* CONTACT SECTION */
-.contact-box {
-  background-color: #1c252d;
-  padding: 30px;
-  border-radius: 6px;
-  border: 1px solid #24303c;
-}
-
-.letterboxd-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.input-row {
-  display: flex;
-  gap: 15px;
-}
-
-.letterboxd-form input, .letterboxd-form textarea {
-  background-color: #14181c;
-  border: 1px solid #24303c;
-  color: #ffffff;
-  padding: 12px;
-  border-radius: 4px;
-  outline: none;
-  font-size: 0.95rem;
-}
-
-.input-row input {
-  flex: 1;
-}
-
-.letterboxd-form input:focus, .letterboxd-form textarea:focus {
-  border-color: #445566;
-}
-
-.btn-submit-form {
-  background-color: #00c030;
+  background: #1a1a1a;
   color: white;
+
+  border: 1px solid #333;
+  border-radius: 12px;
+
+  padding: 15px;
+
+  resize: vertical;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition: 0.3s;
+}
+
+.comment-box textarea:focus {
+  border-color: #ff9800;
+}
+
+.comment-box button {
+
+  margin-top: 15px;
+
+  padding: 12px 22px;
+
+  background: #ff9800;
+  color: black;
+
   border: none;
-  padding: 12px;
-  border-radius: 4px;
-  font-weight: 600;
+  border-radius: 10px;
+
+  font-weight: bold;
   cursor: pointer;
-  align-self: flex-end;
-  padding-left: 30px;
-  padding-right: 30px;
-  transition: background-color 0.2s;
+
+  transition: 0.3s;
 }
 
-.btn-submit-form:hover {
-  background-color: #00b02a;
+.comment-box button:hover {
+
+  background: #ffb547;
+  transform: translateY(-2px);
+
 }
 
-/* FOOTER */
-.main-footer {
+/* ===== COMMENT ITEM ===== */
+
+.comments-list {
+  margin-top: 25px;
+}
+
+.comment-item {
+
+  background: #1b1b1b;
+
+  border: 1px solid #2c2c2c;
+
+  border-radius: 14px;
+
+  padding: 18px;
+
+  margin-bottom: 15px;
+
+  animation: fadeUp 0.4s ease;
+}
+
+.comment-item strong {
+
+  color: #ff9800;
+
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 15px;
+}
+
+.comment-item p {
+
+  color: #ddd;
+
+  line-height: 1.6;
+
+  font-size: 14px;
+}
+
+/* ===== SCHOOL SECTION ===== */
+
+.school-section {
+
+  padding: 80px 10%;
+
+  background: #101010;
+}
+
+.login-warning {
+
   text-align: center;
-  padding: 40px 0;
-  border-top: 1px solid #1c252d;
-  font-size: 0.85rem;
-  color: #667788;
+
+  padding: 30px;
+
+  border: 1px dashed #444;
+
+  border-radius: 15px;
+
+  color: #aaa;
+
+  margin-top: 30px;
 }
 
-/* MOBILE RESPONSIVE (Media Query) */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    gap: 12px;
-    padding: 15px;
-    position: static;
+/* ===== ARCHIVE ===== */
+
+.archive-section {
+
+  padding: 80px 10%;
+
+  background: #0d0d0d;
+}
+
+.archive-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+  gap: 30px;
+}
+
+.archive-card {
+
+  background: #181818;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  border: 1px solid #252525;
+
+  transition: 0.3s;
+}
+
+.archive-card:hover {
+
+  transform: translateY(-5px);
+
+  border-color: #ff9800;
+}
+
+.archive-card img {
+
+  width: 100%;
+  height: 400px;
+
+  object-fit: cover;
+}
+
+.archive-card h3 {
+
+  padding: 20px 20px 10px;
+
+  color: white;
+}
+
+.archive-card p {
+
+  padding: 0 20px 20px;
+
+  color: #bdbdbd;
+
+  line-height: 1.6;
+}
+
+.archive-card textarea {
+
+  width: calc(100% - 40px);
+
+  margin: 0 20px;
+
+  min-height: 100px;
+
+  background: #101010;
+
+  color: white;
+
+  border: 1px solid #333;
+
+  border-radius: 10px;
+
+  padding: 12px;
+
+  resize: vertical;
+}
+
+.archive-card button {
+
+  margin: 20px;
+
+  padding: 10px 18px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #ff9800;
+
+  color: black;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+/* ===== ANIMATION ===== */
+
+@keyframes fadeUp {
+
+  from {
+    opacity: 0;
+    transform: translateY(10px);
   }
-  .hero-section {
-    padding-top: 30px;
-  }
-  .hero-container, .hero-profile-box, .hero-text-box {
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding-left: 0;
-  }
-  .profile-img {
-    margin-bottom: 15px;
-  }
-  .movie-card {
-    width: 100%;
-    margin-right: 0;
-  }
-  .media-container {
-    flex-direction: column;
-  }
-  .input-row {
-    flex-direction: column;
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
